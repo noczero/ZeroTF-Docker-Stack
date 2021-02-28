@@ -16,9 +16,11 @@ For instructions on getting started with the NVIDIA Container Toolkit, refer to 
 
 ### Install The Stack
 
+```bash
 $ git clone https://github.com/noczero/ZeroTF-Docker-Stack.git ZeroTF
 $ cd ZeroTF
 $ docker-compose up --build -d
+```
 
 if nothing error, then you can open 127.0.0.1:8888 with your browser then type zeroml as default token. All files including notebooks or any python file are stored in code directory. 
 
