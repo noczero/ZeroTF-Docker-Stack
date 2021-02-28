@@ -22,7 +22,9 @@ $ cd ZeroTF
 $ docker-compose up --build -d
 ```
 
-if nothing error, then you can open (127.0.0.1:8888) with your browser then type zeroml as default token. All files including notebooks or any python file are stored in code directory. 
+if nothing error, then you can open [127.0.0.1:8888](http://127.0.0.1:8888/) with your browser, then type zeroml as default token. 
+
+All files including notebooks or any python file are stored in code directory. 
 
 The container won't stop unless you stop it, using 
 ``` 
