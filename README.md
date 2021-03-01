@@ -1,9 +1,11 @@
 ZeroTF Docker Stack
 ===============
 
-This repository is use TensorFlow with GPU enabled and Jupyter in docker.
-You can add any python library in requirements.txt, and set jupyter token password in .env
+This repository provides docker container for easier development in machine learning and deep learning. 
+It supports TensorFlow with GPU enabled, Jupyter Notebook and Code Server (VSC on browser).
+You can add any python library in requirements.txt, and configure jupyter token in .env file.
 
+ 
 ## Getting Started
 
 Make sure you have installed docker engine and docker-compose. If not you can refer to the [docker installation guide](https://docs.docker.com/engine/install/) and [docker-compose installation guid](https://docs.docker.com/compose/install/)
@@ -22,7 +24,9 @@ $ cd ZeroTF
 $ docker-compose up --build -d
 ```
 
-if nothing error, then you can open [127.0.0.1:8888](http://127.0.0.1:8888/) with your browser, then type zeroml as default token. 
+If nothing error, then you can open [127.0.0.1:8888](http://127.0.0.1:8888/) with your browser, then type zeroml as default token.
+
+For code-server is available in [127.0.0.1:8889](http://127.0.0.1:8889/). Open folder /tf for working directory.
 
 All files including notebooks or any python file are stored in code directory. 
 
