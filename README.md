@@ -26,7 +26,7 @@ $ docker-compose up --build -d
 
 If nothing error, then you can open [127.0.0.1:8888](http://127.0.0.1:8888/) with your browser, then type zeroml as default token.
 
-For code-server is available in [127.0.0.1:8889](http://127.0.0.1:8889/). Open folder /tf for working directory. You can open its terminal and access the container sheel. You can run python file or something else.
+For code-server is available in [127.0.0.1:8889](http://127.0.0.1:8889/). Open folder /tf for working directory. You can open its terminal and access the container bash shell. You can run python file or something else.
 
 All files including notebooks or any python file are stored in code directory. 
 
