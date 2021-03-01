@@ -1,11 +1,14 @@
 # pull docker imagetensorflow/tensorflow:latest-gpu-jupyter
-FROM tensorflow/tensorflow:latest-gpu-jupyter
+FROM tensorflow/tensorflow:latest-gpu
 
 # define workdir for volumes
 WORKDIR /tf
 
-# Set desired Python version
-ENV python_version 3.6
+# follow the tensorflow python
+ENV python_version 3
+
+# apt update
+RUN apt update
 
 # Install desired Python version (the current TF image is be based on Ubuntu at the moment)
 RUN apt install -y python${python_version}
@@ -24,5 +27,26 @@ COPY requirements.txt requirements.txt
 # Install the requirements
 RUN python -m pip install -r requirements.txt
 
-# Only needed for Jupyter
+# JUPYTER NOTEBOOK
+RUN python -m pip install --no-cache-dir jupyter
+RUN python -m pip install --no-cache-dir jupyter_http_over_ws ipykernel==5.1.1 nbformat==4.4.0
+RUN jupyter serverextension enable --py jupyter_http_over_ws
+
+# Code Server
+RUN curl -fsSL https://code-server.dev/install.sh | sh
+RUN code-server --install-extension formulahendry.terminal \
+    && code-server --install-extension ms-python.python \
+    && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
+
+# supervisor
+RUN apt update && apt install -y supervisor
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# jupyter port
 EXPOSE 8888
+
+# code-server
+EXPOSE 8889
+
+RUN python -m ipykernel.kernelspec
+CMD ["bash", "-c", "source /etc/bash.bashrc && /usr/bin/supervisord"]

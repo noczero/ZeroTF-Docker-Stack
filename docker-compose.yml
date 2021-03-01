@@ -5,8 +5,12 @@ services:
     runtime: nvidia
     restart: always
     env_file: .env
-    ports: 
-      - '8888:8888'
+    ports:
+      - 8888:8888
+      - 8889:8889
     volumes: 
-      - './code:/tf'
+      - ./code:/tf
+    #command: code-server --host 0.0.0.0 --auth none
+
+
     
