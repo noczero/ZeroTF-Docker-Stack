@@ -22,9 +22,9 @@ $ cd ZeroTF
 $ docker-compose up --build -d
 ```
 
-If nothing error, then you can open [127.0.0.1:8888](127.0.0.1:8888) with your browser, then type zeroml as the default token.
+If nothing error, then you can open [127.0.0.1:8888](http://127.0.0.1:8888) with your browser, then type zeroml as the default token.
 
-For code-server is available on [127.0.0.1:8889](127.0.0.1:8888). Open folder /tf for the working directory. You can open its terminal and access the container bash shell. You can run a python file or something else. You can install an extension and customize it, like Visual Studio Code. FYI, a jupyter-notebook file is not yet supported.
+For code-server is available on [127.0.0.1:8889](http://127.0.0.1:8888). Open folder /tf for the working directory. You can open its terminal and access the container bash shell. You can run a python file or something else. You can install an extension and customize it, like Visual Studio Code. FYI, a jupyter-notebook file is not yet supported.
 
 All files including notebooks or any python file are stored in the code directory. 
 
