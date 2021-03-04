@@ -15,16 +15,21 @@ Make sure you have installed the NVIDIA driver and Docker engine for your Linux 
 For instructions on getting started with the NVIDIA Container Toolkit, refer to the [installation guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker).
 
 ## Install the Stack
-
+The installation is very simple.
 ```bash
 $ git clone https://github.com/noczero/ZeroTF-Docker-Stack.git ZeroTF
 $ cd ZeroTF
 $ docker-compose up --build -d
 ```
 
+## Usage
 If nothing error, then you can open [127.0.0.1:8888](http://127.0.0.1:8888) with your browser, then type zeroml as the default token.
 
+![Jupyter Notebook](images/jupyter-ss.png "Jupyter Notebook")
+
 For code-server is available on [127.0.0.1:8889](http://127.0.0.1:8888). Open folder /tf for the working directory. You can open its terminal and access the container bash shell. You can run a python file or something else. You can install an extension and customize it, like Visual Studio Code. FYI, a jupyter-notebook file is not yet supported.
+
+![Code Server](images/code-server-ss.png "Code Server") 
 
 All files including notebooks or any python file are stored in the code directory. 
 
