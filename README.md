@@ -1,9 +1,11 @@
 ZeroTF Docker Stack
 ===============
+[![Visits Badge](https://badges.pufler.dev/visits/noczero/ZeroTF-Docker-Stack)](https://badges.pufler.dev)
+[![Updated Badge](https://badges.pufler.dev/created/noczero/ZeroTF-Docker-Stack)](https://badges.pufler.dev)
+[![Visits Badge](https://badges.pufler.dev/updated/noczero/ZeroTF-Docker-Stack)](https://badges.pufler.dev)
 
 This repository provides a docker container for easier development in machine learning and deep learning. It supports TensorFlow with GPU enabled, Jupyter Notebook, and Code Server (VSC on the browser). You can add any python library in requirements.txt, and configure the jupyter-notebook token in the .env file.
 
- 
 ## Getting Started
 
 Make sure you have installed the docker engine and docker-compose. If not you can refer to the [docker installation guide](https://docs.docker.com/engine/install/) and [docker-compose installation guid](https://docs.docker.com/compose/install/)
